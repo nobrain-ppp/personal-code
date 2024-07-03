@@ -1,11 +1,11 @@
 int sumOfTheDigitsOfHarshadNumber(int x) {
-    int sum=0;
-    int n = x;
-    if(n<10) return n;
-    while(n){
-        sum+=n%10;
+    int sum=0;  //计算x各个位数之和
+    int n = x;       
+    if(n<10) return n;   //当n为个位数哈沙德数为本身
+    while(n){            //计算x各个位数之和
+        sum+=n%10;        
         n/=10;
     }
-    if (x%sum==0) return sum;
+    if (x%sum==0) return sum;   // 能被sum整除返回sum，否则返回1
     else return -1;
 }
